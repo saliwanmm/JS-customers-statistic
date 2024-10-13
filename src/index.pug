@@ -1,0 +1,137 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title CRM Dashboard
+    link(rel="icon", href="/favicon.ico", type="image/x-icon")
+  body
+    // Сайдбар (Dashboard)
+    aside.dashboard
+      .dashboard__logo
+        img(src=require("./assets/img/dashboard-main-icon.png"), alt="")
+        span Dashboard
+      nav.dashboard__menu
+        .dashboard__menu-item
+            img(src=require("./assets/img/dashboard-icon.png"), alt="Dashboard Icon")
+            span Dashboard
+        .dashboard__menu-item
+            img(src=require("./assets/img/product-icon.png"), alt="Product Icon")
+            span Product
+            img(src=require("./assets/img/right-arrow.png"), alt="Right Arrow Icon")
+        .dashboard__menu-item.dashboard__menu-item--active
+            img(src=require("./assets/img/customers-icon.png"), alt="Customers Icon")
+            span Customers
+            img(src=require("./assets/img/right-arrow.png"), alt="Right Arrow Icon")
+        .dashboard__menu-item
+            img(src=require("./assets/img/income-icon.png"), alt="Income Icon")
+            span Income
+            img(src=require("./assets/img/right-arrow.png"), alt="Right Arrow Icon")
+        .dashboard__menu-item
+            img(src=require("./assets/img/promote-icon.png"), alt="Promote Icon")
+            span Promote
+            img(src=require("./assets/img/right-arrow.png"), alt="Right Arrow Icon")
+        .dashboard__menu-item
+            img(src=require("./assets/img/help-icon.png"), alt="Help Icon")
+            span Help
+            img(src=require("./assets/img/right-arrow.png"), alt="Right Arrow Icon")
+      .dashboard__user
+        .user-avatar
+            img(src=require("./assets/img/avatar.jpeg"), alt="User Profile Picture")
+        .user-position
+            span.dashboard__user-name Evano
+            span.dashboard__position Project Manager
+
+    // Контейнер для header та content
+    .main-content
+      // Хедер (Header)
+      header.header
+        .header__greeting Hello Evano 👋
+
+      // Секція з картками статистики
+      .content__overview
+        .content__card-icon
+          .content__icon
+            img(src=require("./assets/img/filter-customers.png"), alt="Filter Customers Icon")
+          .content__card
+            span.content__card-title Total Customers
+            span.content__card-value.total-all 5,423
+            span.content__card-change.percent-all.content__card-change--up ↑ 16% this month
+        .content__card-icon
+          .content__icon
+            img(src=require("./assets/img/filter-members.png"), alt="Filter Customers Icon")
+          .content__card
+            span.content__card-title Members
+            span.content__card-value.total-month 1,893
+            span.content__card-change.percent-month.content__card-change--down ↓ 1% this month
+        .content__card-icon
+          .content__icon
+            img(src=require("./assets/img/filter-active.png"), alt="Filter Active Icon")
+          .content__card
+            span.content__card-title Active Now
+            span.content__card-value.total-active 189
+            .content__avatars
+              img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar1")
+              img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar2")
+              img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar3")
+
+      // Основний контент (Content)
+      main.content
+        // Заголовок таблиці
+        .content__title
+          .content__members
+            h2 All Customers
+            span.content__subtitle Active Members
+          .content__controls
+            .content__search
+              img(src=require("./assets/img/search-icon.png"), alt="Search Icon")
+              input.content__search-input(type="text" placeholder="Search")
+            //- Фільтр сортування
+            .content__filter
+              span Short by:
+              select.content__filter-select
+                option(value="name-asc") Name (A-Z)
+                option(value="name-desc") Name (Z-A)
+                option(value="newest") Newest
+                option(value="oldest") Oldest
+                
+        // Таблиця з даними клієнтів
+        .content__table-wrapper
+          table.content__table
+            thead
+              tr
+                th Customer Name
+                th Company
+                th Phone Number
+                th Email
+                th Country
+                th Status
+            tbody
+            //-   tr.content__table-row
+            //-     td.content__customer-name Jane Cooper
+            //-     td.content__company Microsoft
+            //-     td.content__phone (225) 555-0118
+            //-     td.content__email jane@microsoft.com
+            //-     td.content__country United States
+            //-     td.content__status.content__status--active.active Active
+            //-   tr.content__table-row
+            //-     td.content__customer-name Floyd Miles
+            //-     td.content__company Yahoo
+            //-     td.content__phone (205) 555-0100
+            //-     td.content__email floyd@yahoo.com
+            //-     td.content__country Kiribati
+            //-     td.content__status.content__status--inactive Inactive
+                
+        
+        // Пагінація
+        .content_pagination_footer
+            // Підпис про відображення діапазону даних
+            .content__footer
+                p Showing data 1 to 8 of 256K entries
+
+            .content__pagination
+                button.pagination__prev &lt;
+                ul.pagination__list
+                button.pagination__next &gt;
+
+            

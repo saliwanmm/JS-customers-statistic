@@ -1,0 +1,256 @@
+.main-content {
+  background-color: #f9f9f9;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__overview {
+  background-color: white;
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2% 0.5% 2% 0.5%;
+  margin-bottom: 1%;
+}
+
+.content__card-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  flex: 1;
+  border-right: 1px solid #ddd;
+}
+
+.content__card-icon:last-child {
+  border-right: none;
+}
+
+.content__icon {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.content__icon img {
+  width: 70px;
+  margin-right: 1rem;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__card-title {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.content__card-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content__card-change {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.content__card-change.content__card-change--up {
+  color: green;
+}
+
+.content__card-change.content__card-change--down {
+  color: red;
+}
+
+.content__avatars {
+  display: flex;
+  margin-top: 10px;
+}
+
+.content__avatars img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.content {
+  background-color: #ffffff;
+  width: 85%;
+  padding: 1% 3% 2% 3%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.content__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__subtitle {
+  color: green;
+}
+
+.content__members {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__controls {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 20px; 
+  width: 50%;
+}
+
+.content__search {
+  display: flex;
+  margin-top: 0%;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  height: auto;
+}
+
+.content__search img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.content__search input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #999;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.content__filter {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 35%;
+  justify-content: center;
+  padding: 5px 10px;
+  height: auto;
+  min-height: 38%;
+  margin-top: 0;
+}
+
+.content__filter-select {
+  padding: 2px 5px; /* Зменшіть внутрішні відступи для select */
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem; /* Зменшіть розмір шрифту для select */
+  line-height: 1;
+  height: 100%;
+}
+
+.content__table-wrapper {
+  margin-top: 2%;
+  overflow-x: auto;
+}
+
+.content__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.content__table th, .content__table td {
+  padding: 1.5%;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+.content__table th {
+  color: #858585;
+}
+
+.content__status--active {
+  color: green;
+  font-weight: bold;
+}
+
+.content__status--inactive {
+  color: red;
+  font-weight: bold;
+}
+
+/* PAGINATION */
+
+.content_pagination_footer {
+  display: flex;
+  justify-content: space-between; /* Вирівнює елементи з країв */
+  align-items: center; /* Вирівнює по центру вертикально */
+  margin-top: 20px; /* Додати відступ, якщо потрібно */
+}
+
+.content__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination__prev,
+.pagination__next {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.pagination__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.pagination__item {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pagination__item.active {
+  background-color: #7c25ff;
+  color: #fff;
+}
+
+.pagination__dots {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+

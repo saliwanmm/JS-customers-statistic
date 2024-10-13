@@ -1,0 +1,11 @@
+.header {
+  background-color: #f9f9f9;
+  padding: 2% 6% 1% 0%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.header__greeting {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
