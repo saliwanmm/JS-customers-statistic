@@ -2,6 +2,11 @@ function createCustomers(data, page) {
     const table = document.querySelector(".content__table tbody");
     table.innerHTML = "";
 
+    if (!data[page] || data[page].length === 0) {
+        table.innerHTML = "<tr><td colspan='6'>No customers found</td></tr>";
+        return;
+    }
+
     data[page].forEach(item => {
 
         let row = document.createElement("tr");

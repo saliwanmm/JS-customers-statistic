@@ -3,16 +3,18 @@
   flex-direction: column;
   width: 20%;
   background-color: #fff;
-  height: 100vh;
+  /* height: 100vh; */
+  min-height: 100vh;
   justify-content: space-between;
+  overflow-y: auto;
 }
 
 .dashboard__logo {
   display: flex;
   align-items: center;
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   margin-left: 10%;
 }
 
@@ -25,6 +27,13 @@
 .dashboard__logo span {
   font-size: 200%;
   font-weight: bold;
+}
+
+.dashboard__menu {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .dashboard__menu-item {
@@ -75,6 +84,18 @@
 
 .user-position {
   display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.dashboard__user-name {
+  font-weight: bold;
+  flex-direction: left;
+}
+
+.dashboard__position {
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .dashboard__user img {

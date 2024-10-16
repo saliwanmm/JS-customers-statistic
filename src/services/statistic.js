@@ -41,4 +41,9 @@ function dataStatistic(data, selectorTotal, selectorChange, parm) {
     }
 }
 
-export { dataStatistic };
+function dataActives(allData) {
+    const totalActive = document.querySelector(".total-active");
+    totalActive.textContent = allData.filter(item => item.status === "Active").length;
+}
+
+export { dataStatistic, dataActives };

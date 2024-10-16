@@ -48,7 +48,7 @@ html(lang="en")
       header.header
         .header__greeting Hello Evano 👋
 
-      // Секція з картками статистики
+      // Секція з картками статистики finish
       .content__overview
         .content__card-icon
           .content__icon
@@ -75,7 +75,7 @@ html(lang="en")
               img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar2")
               img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar3")
 
-      // Основний контент (Content)
+      // Основний контент (Content) finish
       main.content
         // Заголовок таблиці
         .content__title
@@ -83,6 +83,7 @@ html(lang="en")
             h2 All Customers
             span.content__subtitle Active Members
           .content__controls
+            //- Фільтр пошуку 
             .content__search
               img(src=require("./assets/img/search-icon.png"), alt="Search Icon")
               input.content__search-input(type="text" placeholder="Search")
@@ -95,7 +96,7 @@ html(lang="en")
                 option(value="newest") Newest
                 option(value="oldest") Oldest
                 
-        // Таблиця з даними клієнтів
+        // Таблиця з даними клієнтів finish
         .content__table-wrapper
           table.content__table
             thead
@@ -123,7 +124,7 @@ html(lang="en")
             //-     td.content__status.content__status--inactive Inactive
                 
         
-        // Пагінація
+        // Пагінація finish
         .content_pagination_footer
             // Підпис про відображення діапазону даних
             .content__footer

@@ -76,6 +76,7 @@ function numberPaginatePages(number, current, allData) {
 
 function updateDataPag(num, curPage, data) {
     const paginated = paginate(data, 8);
+
     createCustomers(paginated[0], curPage);
     numberPaginatePages(num, curPage, data);
 }
