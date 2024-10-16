@@ -6,7 +6,7 @@ html(lang="en")
     title CRM Dashboard
     link(rel="icon", href="/favicon.ico", type="image/x-icon")
   body
-    // Сайдбар (Dashboard)
+    // Dashboard
     aside.dashboard
       .dashboard__logo
         img(src=require("./assets/img/dashboard-main-icon.png"), alt="")
@@ -42,13 +42,15 @@ html(lang="en")
             span.dashboard__user-name Evano
             span.dashboard__position Project Manager
 
-    // Контейнер для header та content
     .main-content
-      // Хедер (Header)
       header.header
+        button.menu-toggle
+          span.menu-icon
+          span.menu-icon
+          span.menu-icon
         .header__greeting Hello Evano 👋
 
-      // Секція з картками статистики finish
+      // Statistics
       .content__overview
         .content__card-icon
           .content__icon
@@ -71,23 +73,18 @@ html(lang="en")
             span.content__card-title Active Now
             span.content__card-value.total-active 189
             .content__avatars
-              img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar1")
-              img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar2")
-              img(src=require("./assets/img/avatar.jpeg"), alt="User Avatar3")
+              
 
-      // Основний контент (Content) finish
+      // Content
       main.content
-        // Заголовок таблиці
         .content__title
           .content__members
             h2 All Customers
             span.content__subtitle Active Members
           .content__controls
-            //- Фільтр пошуку 
             .content__search
               img(src=require("./assets/img/search-icon.png"), alt="Search Icon")
               input.content__search-input(type="text" placeholder="Search")
-            //- Фільтр сортування
             .content__filter
               span Short by:
               select.content__filter-select
@@ -96,7 +93,6 @@ html(lang="en")
                 option(value="newest") Newest
                 option(value="oldest") Oldest
                 
-        // Таблиця з даними клієнтів finish
         .content__table-wrapper
           table.content__table
             thead
@@ -108,31 +104,13 @@ html(lang="en")
                 th Country
                 th Status
             tbody
-            //-   tr.content__table-row
-            //-     td.content__customer-name Jane Cooper
-            //-     td.content__company Microsoft
-            //-     td.content__phone (225) 555-0118
-            //-     td.content__email jane@microsoft.com
-            //-     td.content__country United States
-            //-     td.content__status.content__status--active.active Active
-            //-   tr.content__table-row
-            //-     td.content__customer-name Floyd Miles
-            //-     td.content__company Yahoo
-            //-     td.content__phone (205) 555-0100
-            //-     td.content__email floyd@yahoo.com
-            //-     td.content__country Kiribati
-            //-     td.content__status.content__status--inactive Inactive
-                
+            
         
-        // Пагінація finish
         .content_pagination_footer
-            // Підпис про відображення діапазону даних
             .content__footer
                 p Showing data 1 to 8 of 256K entries
-
             .content__pagination
                 button.pagination__prev &lt;
                 ul.pagination__list
                 button.pagination__next &gt;
-
             

@@ -37,7 +37,6 @@ function numberPaginatePages(number, current, allData) {
     } else {
         addRow(1);
 
-        // Якщо поточна сторінка більше 3, додаємо "..."
         if (current > 3) {
             let dots = document.createElement("li");
             dots.textContent = "...";
@@ -45,7 +44,6 @@ function numberPaginatePages(number, current, allData) {
             list.appendChild(dots);
         }
 
-        // Додаємо сторінки навколо поточної (наприклад, 2 сторінки ліворуч і праворуч)
         let start = Math.max(2, current - 1);
         let end = Math.min(number - 1, current + 2);
 
@@ -53,7 +51,6 @@ function numberPaginatePages(number, current, allData) {
             addRow(i);
         }
 
-        // Якщо поточна сторінка менше number - 2, додаємо "..."
         if (current < number - 2) {
             let dots = document.createElement("li");
             dots.textContent = "...";

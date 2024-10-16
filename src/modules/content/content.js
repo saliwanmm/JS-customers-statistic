@@ -44,7 +44,6 @@ const initContent = () => {
     getData("http://localhost:3000/customers")
         .then(res => {
             allData = res;
-            console.log(res);
             totalPages = paginate(res, 8)[1];
             updateDataPag(totalPages, currentPage, res);
             numberPaginatePages(totalPages, currentPage, res);
